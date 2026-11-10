@@ -62,11 +62,45 @@
     @media (prefers-reduced-motion: reduce) {
       .cloud-home *, .cloud-home *::before, .cloud-home *::after { animation: none !important; transition: none !important; }
     }
+
+    .cloud-home .desktop-header { display: none; }
+    .cloud-home .section, .cloud-home #contact { scroll-margin-top: 4.5rem; }
+    .cloud-home .section-title p:not(.eyebrow) { color: #526477; }
+    .cloud-home .career-list { list-style: none; padding: 0 0 0 1.4rem; margin: 0; border-inline-start: 2px solid #d3e2f3; }
+    .cloud-home .career-list > li { position: relative; margin-bottom: 1rem; }
+    .cloud-home .career-list > li:last-child { margin-bottom: 0; }
+    .cloud-home .career-list > li::before { content: ''; position: absolute; inset: 1.7rem auto auto -1.78rem; width: .65rem; height: .65rem; border-radius: 50%; background: var(--accent-color); box-shadow: 0 0 0 4px #fff; }
+    .cloud-home .career-list ul { padding-inline-start: 1.2rem; }
+    .cloud-home .credential { display: flex; flex-direction: column; gap: .6rem; }
+    .cloud-home .credential .eyebrow, .cloud-home .credential h3 { margin: 0; }
+    .cloud-home .credential > a { margin-top: auto; align-self: flex-start; }
+    .cloud-home .credential-list { list-style: none; padding: 0; margin: 0; }
+    .cloud-home .credential-list li { display: flex; justify-content: space-between; align-items: baseline; gap: .2rem 1rem; flex-wrap: wrap; padding: .65rem 0; border-bottom: 1px solid #dce6f2; }
+    .cloud-home .credential-list a { flex-shrink: 0; }
+    .cloud-home .education-list { list-style: none; padding: 0; margin: 0; }
+    .cloud-home .education-list li + li { padding-top: .85rem; margin-top: .85rem; border-top: 1px solid #dce6f2; }
+    .cloud-home .education-list p { margin: 0; }
+    @media (min-width: 992px) {
+      .cloud-home .header { background: #fff; border-bottom: 1px solid #dce6f2; }
+      .cloud-home .desktop-header { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+      .cloud-home .desktop-header nav { display: flex; flex-wrap: wrap; gap: .45rem 1.25rem; }
+      .cloud-home .desktop-header a { color: #1b3e67; font-weight: 600; }
+      .cloud-home .desktop-header .desktop-brand { font-size: 1.15rem; font-weight: 700; }
+      .cloud-home .mobile-nav-toggle, .cloud-home #navmenu { display: none !important; }
+      .cloud-home.mobile-nav-active { overflow: auto; }
+    }
   </style>
 </head>
 <body class="index-page cloud-home">
   <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
   <header id="header" class="header fixed-top">
+    <div class="container desktop-header">
+      <a class="desktop-brand" href="#hero">Suman Yadav</a>
+      <nav aria-label="Desktop navigation">
+        <a href="#about">About</a><a href="#portfolio">Projects</a><a href="#resume">Experience</a>
+        <a href="#skills">Skills</a><a href="#credentials">Certifications</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
     <button type="button" class="mobile-nav-toggle bi bi-list" aria-label="Open navigation" aria-expanded="false" aria-controls="navmenu"></button>
     <nav id="navmenu" class="navmenu" aria-label="Main navigation" inert>
       <div class="profile-img">
@@ -81,8 +115,10 @@
         <li><a href="#hero">Home</a></li>
         <li><a href="#portfolio">Cloud project</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills and credentials</a></li>
         <li><a href="#resume">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#credentials">Certifications</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -113,6 +149,29 @@
       </div>
     </section>
 
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">About me</p>
+          <h2 id="about-title">From SaaS delivery to cloud infrastructure</h2>
+        </div>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <div class="about-copy">
+              <p>I started in software development, building CRM, billing and ERP tools. At ib vogt, I moved into SaaS delivery, where I supported a multi-region ESG platform rollout and worked on API integrations, workflow automation and user access.</p>
+              <p class="mb-0">I’m applying that experience to cloud engineering through AWS labs and formal training. My current work focuses on how networks, access controls and infrastructure automation fit together.</p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <aside class="cloud-panel about-focus" aria-labelledby="focus-title">
+              <h3 id="focus-title">What I’m working on now</h3>
+              <p>AWS Cloud Engineering at Digital Career Institute, with hands-on practice in networking, Linux and infrastructure as code.</p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="portfolio" class="section light-background" aria-labelledby="project-title">
       <div class="container">
         <div class="section-title">
@@ -125,7 +184,8 @@
             <div class="cloud-panel">
               <h3>What I built</h3>
               <p>I used an EC2 Instance Connect Endpoint to reach the instance. The instance security group allowed inbound SSH on TCP port 22 from the endpoint’s security group.</p>
-              <p class="muted">The lab gave me practice with subnet placement, private access and security group rules.</p>
+              <p><strong>What I verified</strong> I connected over SSH through the endpoint while keeping the instance in a private subnet without a public IP.</p>
+              <p class="muted">This lab focused on subnet placement, private access and security group rules.</p>
               <ul class="cloud-tags" aria-label="Project technologies">
                 <li>Amazon EC2</li><li>Amazon VPC</li><li>Linux</li><li>Security groups</li><li>SSH</li>
               </ul>
@@ -145,76 +205,125 @@
       </div>
     </section>
 
-    <section id="about" class="section" aria-labelledby="about-title">
+    <section id="resume" class="section" aria-labelledby="resume-title">
       <div class="container">
         <div class="section-title">
-          <p class="eyebrow">About me</p>
-          <h2 id="about-title">From SaaS delivery to cloud infrastructure</h2>
+          <p class="eyebrow">Career timeline</p>
+          <h2 id="resume-title">Professional experience</h2>
         </div>
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-7">
-            <p class="about-copy mb-0">I started in software development and went on to support a cloud-based ESG platform. My work included integrating APIs, automating workflows and managing user access. I bring that experience to the AWS infrastructure I’m learning to build.</p>
-          </div>
-          <div class="col-lg-5">
-            <aside class="cloud-panel about-focus" aria-labelledby="focus-title">
-              <h3 id="focus-title">What I’m working on now</h3>
-              <p>AWS Cloud Engineering at Digital Career Institute, with hands-on practice in networking, Linux and infrastructure as code.</p>
-            </aside>
-          </div>
-        </div>
+        <ol class="career-list">
+          <li>
+            <article class="cloud-panel">
+              <h3>ESG Software Specialist</h3>
+              <p class="muted">ib vogt GmbH · Berlin · Oct 2021 – Nov 2025</p>
+              <ul>
+                <li>Supported the rollout of a cloud-based ESG SaaS platform across 8+ regions, including integrations and dashboards.</li>
+                <li>Managed user onboarding and access for 200+ users.</li>
+                <li>Improved workflow and reporting efficiency by 30% through API integrations and automation.</li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="cloud-panel">
+              <h3>Management Intern</h3>
+              <p class="muted">Explore Europe Travel GmbH · Berlin · Jan 2020 – Jul 2020</p>
+              <p>Supported CRM maintenance, KPI reporting and client onboarding with European stakeholders and US clients.</p>
+            </article>
+          </li>
+          <li>
+            <article class="cloud-panel">
+              <h3>Software Developer</h3>
+              <p class="muted">Sheth Developers Pvt. Ltd. · India · Jun 2017 – Aug 2019</p>
+              <p>Developed CRM and billing software, client feedback tools and an ERP access rights portal in a cross-functional agile team.</p>
+            </article>
+          </li>
+        </ol>
       </div>
     </section>
 
     <section id="skills" class="section light-background" aria-labelledby="skills-title">
       <div class="container">
         <div class="section-title">
-          <h2 id="skills-title">Skills and credentials</h2>
+          <h2 id="skills-title">Technical skills</h2>
         </div>
         <div class="row g-4">
-          <div class="col-md-6 col-xl-4">
-            <article class="cloud-panel">
-              <h3>Cloud and networking</h3>
-              <p>Private EC2 access, Amazon VPC, Linux, SSH and security groups. Coursework also covers IAM, S3, Lambda and CloudWatch.</p>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-4">
-            <article class="cloud-panel">
-              <h3>Infrastructure and tooling</h3>
-              <p>Terraform, Infrastructure as Code, Git, Bash and CI/CD fundamentals. Docker and Kubernetes through training.</p>
-            </article>
-          </div>
-          <div class="col-md-6 col-xl-4">
-            <article class="cloud-panel">
-              <h3>Completed certifications</h3>
-              <ul class="mb-0">
-                <li><a href="https://www.credly.com/badges/da116247-74e3-4003-834f-375572e0fc98/public_url">HashiCorp Certified: Terraform Associate (004)</a></li>
-                <li>ISO/IEC 27001 Lead Auditor</li>
-                <li>ISO/IEC 27001 Lead Implementer</li>
-              </ul>
-            </article>
-          </div>
+          <div class="col-md-4"><article class="cloud-panel">
+            <h3>AWS and networking</h3>
+            <p>EC2, VPC, private subnets, Linux, SSH and security groups in hands-on labs. IAM, S3, Lambda and CloudWatch through coursework.</p>
+          </article></div>
+          <div class="col-md-4"><article class="cloud-panel">
+            <h3>Infrastructure and tooling</h3>
+            <p>Terraform, Infrastructure as Code, Git and Bash. Docker, Kubernetes and CI/CD fundamentals through training.</p>
+          </article></div>
+          <div class="col-md-4"><article class="cloud-panel">
+            <h3>Software and integration</h3>
+            <p>REST APIs, workflow automation, MS SQL, user access management, Jira and Confluence.</p>
+          </article></div>
         </div>
       </div>
     </section>
 
-    <section id="resume" class="section" aria-labelledby="resume-title">
+    <section id="credentials" class="section" aria-labelledby="credentials-title">
       <div class="container">
         <div class="section-title">
-          <h2 id="resume-title">Professional experience</h2>
+          <h2 id="credentials-title">Certifications and credentials</h2>
+          <p>Completed credentials in infrastructure, security, software and project delivery.</p>
         </div>
         <div class="row g-4">
-          <div class="col-md-6">
+          <div class="col-md-4"><article class="cloud-panel credential">
+            <p class="eyebrow muted">Infrastructure as Code</p>
+            <h3>HashiCorp Certified: Terraform Associate (004)</h3>
+            <a href="https://drive.google.com/file/d/1kTiBUPMDXcl7x1ezsrHhKwaba6EExV4r/view?usp=drivesdk" aria-label="View HashiCorp Certified: Terraform Associate (004) certificate">View certificate</a>
+          </article></div>
+          <div class="col-md-4"><article class="cloud-panel credential">
+            <p class="eyebrow muted">Information security</p>
+            <h3>ISO/IEC 27001 Lead Auditor</h3>
+            <a href="https://drive.google.com/file/d/1C0ZTU7QZBrzp7cF2yOsljUmTVT_NCSw9/view?usp=drivesdk" aria-label="View ISO/IEC 27001 Lead Auditor certificate">View certificate</a>
+          </article></div>
+          <div class="col-md-4"><article class="cloud-panel credential">
+            <p class="eyebrow muted">Information security</p>
+            <h3>ISO/IEC 27001 Lead Implementer</h3>
+            <a href="https://drive.google.com/file/d/1taiYK7spgNreAZBsRqzuoi4UpZz8njc3/view?usp=drivesdk" aria-label="View ISO/IEC 27001 Lead Implementer certificate">View certificate</a>
+          </article></div>
+        </div>
+        <div class="cloud-panel mt-4">
+          <h3>Additional credentials</h3>
+          <ul class="credential-list">
+            <li><span>Oracle OCJA</span><a href="https://drive.google.com/file/d/0BxZrXneVxX-KNWw2Z2prbUhVb2s/view?usp=drivesdk&amp;resourcekey=0--S0VdXOUbeIlbvcS--DzEw" aria-label="View Oracle OCJA certificate">View certificate</a></li>
+            <li><span>Certified Associate in Project Management (PMI CAPM)</span><a href="https://drive.google.com/file/d/1V67L0R73_1_a0Ad9u59feFePQiVGcrpF/view?usp=drivesdk" aria-label="View Certified Associate in Project Management (PMI CAPM) certificate">View certificate</a></li>
+            <li><span>Certified Scrum Product Owner (Scrum Alliance)</span><a href="https://drive.google.com/file/d/1sXs-11iEt-t518k_fpW-ul4WuD-QynA7/view?usp=drivesdk" aria-label="View Certified Scrum Product Owner (Scrum Alliance) certificate">View certificate</a></li>
+            <li><span>Certified ScrumMaster (Scrum Alliance)</span><a href="https://drive.google.com/file/d/1AJWwNoBLm1Q1q6LCAkmKUfakehCkDJfZ/view?usp=drivesdk" aria-label="View Certified ScrumMaster (Scrum Alliance) certificate">View certificate</a></li>
+            <li><span>Product Management Bootcamp (allWomen)</span><a href="https://drive.google.com/file/d/1HvZ0W1P4wxqIAyMzQVDXfu6bE4zUyepE/view?usp=drivesdk" aria-label="View Product Management Bootcamp (allWomen) certificate">View certificate</a></li>
+            <li><span>International Certificate in Product Management</span><a href="https://drive.google.com/file/d/1zAsd6sb_sa6rQ6HvmtPmfpxB9FIiPlMy/view?usp=drivesdk" aria-label="View International Certificate in Product Management certificate">View certificate</a></li>
+            <li><span>Leadership Development (London School of Business &amp; Finance)</span><a href="https://drive.google.com/file/d/12oQLvbM593spGRVAMQhaDFXk9feMtdsJ/view?usp=drivesdk" aria-label="View Leadership Development (London School of Business &amp; Finance) certificate">View certificate</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section light-background" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-title"><h2 id="education-title">Education and languages</h2></div>
+        <div class="row g-4">
+          <div class="col-lg-8">
             <article class="cloud-panel">
-              <h3>ESG Software Specialist</h3>
-              <p class="muted">ib vogt GmbH · Berlin · Oct 2021 – Nov 2025</p>
-              <p>Supported a cloud-based ESG SaaS rollout across 8+ regions and managed integrations, dashboards, onboarding and access for 200+ users. Improved workflow and reporting efficiency by 30% through API integrations and automation.</p>
+              <h3>Education and training</h3>
+              <ul class="education-list">
+                <li><strong>AWS Cloud Engineering</strong><p class="muted">Digital Career Institute · In progress</p></li>
+                <li><strong>Global MBA</strong><p class="muted">Berlin School of Business &amp; Innovation · Project Management · 2021</p></li>
+                <li><strong>Bachelor of Engineering in IT</strong><p class="muted">Mumbai University · 2017</p></li>
+              </ul>
             </article>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-4">
             <article class="cloud-panel">
-              <h3>Software Developer</h3>
-              <p class="muted">Sheth Developers Pvt. Ltd. · India · Jun 2017 – Aug 2019</p>
-              <p>Developed CRM, billing and ERP solutions with cross-functional teams using agile practices.</p>
+              <h3>Languages</h3>
+              <ul class="education-list">
+                <li>English · C2</li>
+                <li>German · B1 · <a href="https://drive.google.com/file/d/1i-J5VUaw9tt6BtYOIK8jaOo_5SKjL9MS/view?usp=drivesdk" aria-label="View German B1 certificate">View certificate</a></li>
+                <li>Hindi · Native</li>
+                <li>Spanish · Basic</li>
+              </ul>
             </article>
           </div>
         </div>
