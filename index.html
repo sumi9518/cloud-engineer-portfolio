@@ -24,8 +24,12 @@
     .cloud-home .hero .role { color: var(--accent-color); }
     .cloud-home .eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .cloud-home .section-title { text-align: left; padding-bottom: 1.75rem; }
-    .cloud-home .section-title h2 { margin-bottom: .55rem; }
-    .cloud-home .section-title p { max-width: 44rem; }
+    .cloud-home .section-title h2 { margin: 0 0 .65rem; font-size: clamp(1.75rem, 4vw, 2.25rem); line-height: 1.2; }
+    .cloud-home .section-title h2::after { display: none; }
+    .cloud-home .section-title p { max-width: 44rem; margin: 0; line-height: 1.55; }
+    .cloud-home .section-title .eyebrow { margin-bottom: .55rem; color: #1c4d7d; font-size: .78rem; font-weight: 700; }
+    .cloud-home .about-focus { background: #f4f8fd; border-inline-start: 3px solid var(--accent-color); }
+    .cloud-home .about-copy { max-width: 39rem; }
     .cloud-home .cloud-panel { padding: clamp(1.1rem, 3vw, 1.8rem); border: 1px solid #dce6f2; border-radius: 1rem; background: #fff; height: 100%; }
     .cloud-home .cloud-panel h3 { font-size: 1.25rem; }
     .cloud-home .cloud-panel :last-child { margin-bottom: 0; }
@@ -146,7 +150,17 @@
         <div class="section-title">
           <p class="eyebrow">About me</p>
           <h2 id="about-title">From SaaS delivery to cloud infrastructure</h2>
-          <p>My background spans software development, API integrations, workflow automation and access management. At Digital Career Institute, I’m building on that experience with AWS, Linux, Terraform, networking and CI/CD.</p>
+        </div>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <p class="about-copy mb-0">I started in software development and went on to support a cloud-based ESG platform. My work included integrating APIs, automating workflows and managing user access. I bring that experience to the AWS infrastructure I’m learning to build.</p>
+          </div>
+          <div class="col-lg-5">
+            <aside class="cloud-panel about-focus" aria-labelledby="focus-title">
+              <h3 id="focus-title">What I’m working on now</h3>
+              <p>AWS Cloud Engineering at Digital Career Institute, with hands-on practice in networking, Linux and infrastructure as code.</p>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
