@@ -1,944 +1,259 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Suman Yadav - Product Manager</title>
-  <meta name="description" content="Suman Yadav - Product Manager">
-  <meta name="keywords" content="Suman Yadav - Product Manager">
-
-  <!-- Favicons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suman Yadav | Cloud Engineer</title>
+  <meta name="description" content="Suman Yadav’s AWS cloud engineering portfolio. Explore a private EC2 access lab, SaaS integration experience, and Terraform credentials.">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;family=Quicksand:wght@400;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+  <style>
+    .cloud-home .hero { min-height: auto; padding: clamp(5.5rem, 10vw, 9rem) 0 4rem; }
+    .cloud-home .hero .hero-content { padding: 0; }
+    .cloud-home .hero .hero-image { padding: 2rem 1.25rem; }
+    .cloud-home .hero .hero-title { margin-bottom: 1rem; }
+    .cloud-home .hero .lead { margin-bottom: 1.4rem; }
+    .cloud-home .hero .hero-main-image { display: block; width: 100%; max-height: 30rem; object-fit: cover; object-position: center 38%; }
+    .cloud-home .hero .hero-actions { margin-bottom: 0; }
+    .cloud-home .hero .role { color: var(--accent-color); }
+    .cloud-home .eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .cloud-home .section-title { text-align: left; padding-bottom: 1.75rem; }
+    .cloud-home .section-title h2 { margin-bottom: .55rem; }
+    .cloud-home .section-title p { max-width: 44rem; }
+    .cloud-home .cloud-panel { padding: clamp(1.1rem, 3vw, 1.8rem); border: 1px solid #dce6f2; border-radius: 1rem; background: #fff; height: 100%; }
+    .cloud-home .cloud-panel h3 { font-size: 1.25rem; }
+    .cloud-home .cloud-panel :last-child { margin-bottom: 0; }
+    .cloud-home .cloud-panel a, .cloud-home .footer .contact-link { text-decoration: underline; text-underline-offset: .2em; }
+    .cloud-home .cloud-diagram { background: #102842; border-color: #102842; color: #eef5ff; }
+    .cloud-home .cloud-diagram figcaption { color: #b8d8ff; }
+    .cloud-home .cloud-diagram ol { list-style: none; margin: 1rem 0 0; padding: 0; }
+    .cloud-home .cloud-diagram li { padding: .6rem .8rem; border: 1px solid #597491; border-radius: .45rem; }
+    .cloud-home .cloud-diagram li + li { position: relative; margin-top: 1rem; }
+    .cloud-home .cloud-diagram li + li::before { content: '↓'; position: absolute; top: -1.05rem; left: .8rem; color: #b8d8ff; line-height: 1rem; }
+    .cloud-home .cloud-diagram small { display: block; color: #cbd9ea; }
+    .cloud-home .cloud-tags { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: 1rem 0 0; padding: 0; }
+    .cloud-home .cloud-tags li { padding: .18rem .55rem; border: 1px solid #dce6f2; border-radius: .4rem; color: #1c4d7d; font-size: .85rem; }
+    .cloud-home .muted { color: #526477; }
+    .cloud-home .cloud-contact h2 { color: #fff; }
+    .cloud-home .cloud-contact .contact-link { color: #d6e8ff; }
+    .cloud-home .mobile-nav-toggle { border: 0; padding: 0; background: transparent; }
+    .cloud-home:not(.mobile-nav-active) #navmenu { visibility: hidden; }
+    .cloud-home.mobile-nav-active #navmenu { overflow-y: auto; }
+    @media (max-width: 375px) {
+      .cloud-home.mobile-nav-active .mobile-nav-toggle { right: 1rem; color: #fff; }
+    }
+    .cloud-home :focus-visible { outline: 3px solid #1373ce; outline-offset: 4px; }
+    .cloud-home .skip-link { position: fixed; inset: .75rem auto auto .75rem; z-index: 1000; background: #fff; padding: .5rem 1rem; }
+    @media (max-width: 991px) {
+      .cloud-home .hero .content-wrapper { margin-inline: auto; }
+      .cloud-home .hero .hero-image { padding-top: 2.5rem; }
+      .cloud-home .hero .image-container { max-width: 21rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .cloud-home *, .cloud-home *::before, .cloud-home *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
 </head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="https://sumi9518.github.io/product-manager-portfolio/index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <!-- Uncomment the line below if you also wish to use an text logo -->
-        <!-- <h1 class="sitename">Suman Yadav</h1> -->
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-
-        <div class="profile-img">
-          <img src="assets/img/profile/my_photo.jpeg" alt="" class="img-fluid rounded-circle">
-        </div>
-
-        <a href="https://sumi9518.github.io/product-manager-portfolio/index.html" class="logo d-flex align-items-center justify-content-center active">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.webp" alt=""> -->
-          <h1 class="sitename">Suman Yadav</h1>
-        </a>
-
-        <div class="social-links text-center">
-          <a href="https://www.linkedin.com/in/suman-yadav-berlin/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          <a href="https://github.com/sumi9518"><i class="bi bi-github"></i></a>
-        </div>
-
-        <ul>
-          <li><a href="https://sumi9518.github.io/product-manager-portfolio/index.html">Home</a></li>
-          <li><a href="https://sumi9518.github.io/product-manager-portfolio/index.html#about">About</a></li>
-          <li><a href="https://sumi9518.github.io/product-manager-portfolio/index.html#resume">Resume</a></li>
-          <li><a href="https://sumi9518.github.io/product-manager-portfolio/index.html#portfolio">Portfolio</a></li>
-          <li><a href="mailto:sumanyadav9518@gmail.com">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
+<body class="index-page cloud-home">
+  <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
+  <header id="header" class="header fixed-top">
+    <button type="button" class="mobile-nav-toggle bi bi-list" aria-label="Open navigation" aria-expanded="false" aria-controls="navmenu"></button>
+    <nav id="navmenu" class="navmenu" aria-label="Main navigation" inert>
+      <div class="profile-img">
+        <img src="assets/img/profile/my_photo.jpeg" alt="" class="img-fluid rounded-circle">
+      </div>
+      <a href="#hero" class="logo d-flex align-items-center justify-content-center text-white fw-bold fs-4">Suman Yadav</a>
+      <div class="social-links text-center">
+        <a href="https://www.linkedin.com/in/suman-yadav-aws/" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/sumi9518" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+      </div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#portfolio">Cloud project</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills and credentials</a></li>
+        <li><a href="#resume">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
-
+  <main id="main">
+    <section id="hero" class="hero section" aria-labelledby="hero-title">
       <div class="container">
         <div class="row g-0 align-items-center">
-
-          <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
+          <div class="col-lg-6 hero-content">
             <div class="content-wrapper">
-              <h1 class="hero-title">Skilled <span class="typed" data-typed-items="Product Manager, Product Owner"></span></h1>
-              <p class="lead">I bridge business goals and user needs to build purposeful digital products. Passionate about clean, functional design and continuous improvement.</p>
-              <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
-                <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2">5+</span>
-                  <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="2">6+</span>
-                  <span class="stat-label">Years Experience</span>
-                </div>
-                <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="2">9</span>
-                  <span class="stat-label">Certifications</span>
-                </div>
-              </div>
-
-              <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
-                <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                <a href="mailto:sumanyadav9518@gmail.com" class="btn btn-outline">Get In Touch</a>
-              </div>
-
-              <div class="social-links" data-aos="fade-up" data-aos-delay="400">
-                <a href="https://www.linkedin.com/in/suman-yadav-berlin/"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/sumi9518"><i class="bi bi-github"></i></a>
+              <p class="eyebrow role">Cologne, Germany · AWS &amp; Terraform</p>
+              <h1 class="hero-title" id="hero-title">Suman Yadav<br><span class="role">Cloud Engineer</span></h1>
+              <p class="lead">I bring experience in software development, cloud-based SaaS rollouts and API integrations. I’m building AWS infrastructure skills through hands-on labs and cloud engineering training.</p>
+              <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary">Explore the AWS lab</a>
+                <a href="#contact" class="btn btn-outline">Get in touch</a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
+          <div class="col-lg-6 hero-image">
             <div class="image-container">
-              <div class="floating-elements">
-                <div class="floating-card card-1" data-aos="zoom-in" data-aos-delay="300">
-                  <i class="bi bi-palette"></i>
-                  <span>Product Strategy & UX</span>
-                </div>
-                <div class="floating-card card-2" data-aos="zoom-in" data-aos-delay="400">
-                  <i class="bi bi-code-slash"></i>
-                  <span>Product Manager</span>
-                </div>
-                <div class="floating-card card-3" data-aos="zoom-in" data-aos-delay="500">
-                  <i class="bi bi-lightning"></i>
-                  <span>Stakeholder-Focused</span>
-                </div>
-              </div>
-              <img src="assets/img/profile/my_photo.jpeg" alt="Portfolio Hero" class="img-fluid hero-main-image">
-              <div class="image-overlay"></div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section><!-- /Hero Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>About Me</h2>
-        <p>I’m passionate about building digital products that are useful, thoughtful, and built to last.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-
-          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
-            <div class="profile-image-wrapper">
-              <div class="profile-image">
-                <img src="assets/img/profile/my_photo.jpeg" alt="Profile" class="img-fluid">
-              </div>
-              <div class="signature-section">
-                <p class="quote">Designing with clarity. Delivering with purpose. Collaborating with impact.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
-            <div class="about-content">
-              <div class="intro">
-                <h2>Hi, I'm Suman - a Product Manager</h2>
-                <p>I’m a Product Manager with a background in software engineering and a Global MBA in Project Management. I specialize in translating business challenges into scalable digital solutions — from discovery and roadmap planning to feature delivery and stakeholder alignment.</p>
-              </div>
-
-              <div class="skills-grid">
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
-                  <div class="skill-icon">
-                    <i class="bi bi-palette"></i>
-                  </div>
-                  <h4>Product Thinking</h4>
-                  <p>Crafts solutions that align user needs with business goals. Skilled at defining MVPs, writing user stories, and shaping feature roadmaps.</p>
-                </div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
-                  <div class="skill-icon">
-                    <i class="bi bi-code-slash"></i>
-                  </div>
-                  <h4>Cross-Functional Collaboration</h4>
-                  <p>Bridges teams across tech, design, and business. Experienced in gathering requirements, aligning stakeholders, and leading agile delivery cycles.</p>
-                </div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
-                  <div class="skill-icon">
-                    <i class="bi bi-camera"></i>
-                  </div>
-                  <h4>Data-Informed Decision Making</h4>
-                  <p>Applies analytics, user feedback, and A/B testing to drive product improvements. Familiar with tools like SQL, GA, and metrics tracking frameworks.</p>
-                </div>
-              </div>
-
-              <div class="journey-timeline" data-aos="fade-up" data-aos-delay="300">
-                <div class="timeline-item">
-                  <div class="year">2017</div>
-                  <div class="description">Graduated with Bachelor of Engineering in Information Technology from Mumbai University</div>
-                </div>
-                <div class="timeline-item">
-                  <div class="year">2017 - 2019</div>
-                  <div class="description">Joined Sheth as Software Developer</div>
-                </div>
-                <div class="timeline-item">
-                  <div class="year">2019 - 2021</div>
-                  <div class="description">Graduated with Global MBA from Berlin School of Business & Innovation</div>
-                </div>
-                <div class="timeline-item">
-                  <div class="year">2021 - present</div>
-                  <div class="description">Working as ESG Software Specialist with ib vogt GmbH</div>
-                </div>
-              </div>
-
-              <div class="cta-section" data-aos="fade-up" data-aos-delay="400">
-                <div class="fun-fact">
-                  <span class="emoji">👩🏻‍💼</span>
-                  <span class="text">Passionate Product Manager based in Germany</span>
-                </div>
-                <div class="action-buttons">
-                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                  <a href="mailto:sumanyadav9518@gmail.com" class="btn btn-outline">Reach me Out</a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="skills-grid">
-              <div class="row g-4">
-                <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
-                  <div class="skill-card">
-                    <div class="skill-header">
-                      <i class="bi bi-code-slash"></i>
-                      <h3>Product Management</h3>
-                    </div>
-                    <div class="skills-animation">
-                       <div class="row">
-              <!-- First Column -->
-              <div class="col-6">
-                <div class="skill-item">
-                  <div class="skill-info"><span class="skill-name">Agile & Scrum</span></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span class="skill-name">Kanban</span></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span class="skill-name">Backlog</span></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span class="skill-name">Prototyping</span></div>
-                </div>
-              </div>
-            <div class="col-6">
-                <div class="skill-item">
-                  <div class="skill-info"><span class="skill-name">Roadmapping</span></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span class="skill-name">Sprint Planning</span></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span class="skill-name">OKRs/KPIs</span></div>
-                </div>
-              </div>
-            
-            </div>
-                    </div>
-                  </div><!-- End Product Management Card -->
-                </div>
-
-                <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
-                  <div class="skill-card">
-                    <div class="skill-header">
-                      <i class="bi bi-server"></i>
-                      <h3>Core Competencies</h3>
-                    </div>
-                    <div class="skills-animation">
-                      <div class="row">
-                          <!-- First Column -->
-                          <div class="col-6">
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Stakeholder Management</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Cross-functional Teams</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">UX Focus</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">User Stories</span></div>
-                            </div>
-                          </div>
-
-                          <div class="col-6">
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Requirement Gathering</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Risk Mitigation</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Documentation</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">SEO (Search Engine Optimization)</span></div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                  </div><!-- End Core Competencies Card -->
-                </div>
-
-                <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
-                  <div class="skill-card">
-                    <div class="skill-header">
-                      <i class="bi bi-palette"></i>
-                      <h3>Tools & Tech</h3>
-                    </div>
-                    <div class="skills-animation">
-                      <div class="row">
-                          <!-- First Column -->
-                          <div class="col-6">
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Figma</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">JIRA</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Confluence</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">CMS (WordPress)</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Excel</span></div>
-                            </div>
-                          </div>
-                        <div class="col-6">
-                          <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">SQL</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">MS Project</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Office 365</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Google Workspace	</span></div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                  </div><!-- End Tools & Tech Card -->
-                </div>
-
-                <div class="col-md-6" data-aos="flip-left" data-aos-delay="500">
-                  <div class="skill-card">
-                    <div class="skill-header">
-                      <i class="bi bi-cloud"></i>
-                      <h3>Soft Skills</h3>
-                    </div>
-                    <div class="skills-animation">
-                      <div class="row">
-                          <!-- First Column -->
-                          <div class="col-6">
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Leadership</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Communication</span></div>
-                            </div>
-                          </div>
-
-                          <div class="col-6">
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name"> Cultural Adaptability</span></div>
-                            </div>
-                            <div class="skill-item">
-                              <div class="skill-info"><span class="skill-name">Time Management</span></div>
-                            </div>
-                          </div>
-                        </div>
-                      
-                    </div>
-                  </div><!-- End Soft Skills Card -->
-                </div>
-              </div>
-            </div><!-- End Skills Grid -->
-          </div>
-
-          <div class="col-lg-4">
-            <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
-              <h3>Professional Expertise</h3>
-              <p>With 6+ years of experience across software development, client-side product ownership, and digital project delivery, I help bridge the gap between business needs and technical execution.
-I specialize in agile product workflows, stakeholder collaboration, and turning complex requirements into user-first solutions.</p>
-
-              <div class="summary-stats">
-                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="stat-circle">
-                    <i class="bi bi-trophy"></i>
-                  </div>
-                  <div class="stat-info">
-                    <span class="stat-number">6+</span>
-                    <span class="stat-label">Years Experience</span>
-                  </div>
-                </div>
-
-                <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
-                  <div class="stat-circle">
-                    <i class="bi bi-diagram-3"></i>
-                  </div>
-                  <div class="stat-info">
-                    <span class="stat-number">5+</span>
-                    <span class="stat-label">Projects Completed</span>
-                  </div>
-                </div>
-
-                <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
-                  <div class="stat-circle">
-                    <i class="bi bi-people"></i>
-                  </div>
-                  <div class="stat-info">
-                    <span class="stat-number">9</span>
-                    <span class="stat-label">Certifications</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="skills-badges" data-aos="fade-up" data-aos-delay="600">
-                <h4>Certifications</h4>
-                <div class="badge-list">
-                  <div class="skill-badge">International Certificate in Product Management (Huston University) </div>
-                  <div class="skill-badge">Product Management Bootcamp (allWomen)</div>
-                  <div class="skill-badge">Certified Scrum Product Owner (Scrum Alliance)</div>
-                  <div class="skill-badge">Certified Scrum Master (Scrum Alliance)</div>
-                  <div class="skill-badge">Certified Associate Product Manager (PMI)</div>
-                  <div class="skill-badge">ISO 27001 Certified</div>
-                  <div class="skill-badge">Microsoft SQL Certified</div>
-                  <a href="https://drive.google.com/file/d/0BxZrXneVxX-KbUl3VWRJV3l1bE0/view?usp=drive_link&resourcekey=0-6GnETnID1tkAuuG36JI9yQ" target="_blank" style="text-decoration: none;">
-                   <div class="skill-badge">Oracle OCJA Certified</div>
-                  </a>
-                </div>
-              </div>
-            </div><!-- End Skills Summary -->
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Resume</h2>
-        <p>From technical roots to product impact — explore the journey behind the title.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="experience-section">
-              <div class="section-header">
-                <h2><i class="bi bi-briefcase"></i> Professional Journey</h2>
-                <p class="section-subtitle">From software development to product management, my career has been shaped by a passion for building digital solutions that are both functional and user-focused. Over the past 6+ years, I’ve worked across diverse teams and industries, translating complex requirements into impactful products and aligning technical execution with strategic goals.</p>
-              </div>
-
-              <div class="experience-cards">
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="card-header">
-                    <div class="role-info">
-                      <h3>ESG Software Specialist</h3>
-                      <h4>ib vogt GmbH</h4>
-                    </div>
-                    <span class="duration">October 2021 - Present</span>
-                  </div>
-                  <div class="card-body">
-                    <p>Acted as internal product lead for the customization and rollout of ESG SaaS tools across global branches, aligning internal requirements with the vendor’s product team.
-                    </p>
-                    <ul class="achievements">
-                      <li>Collaborated with the external Product Manager to refine platform features, prioritize automation needs, and ensure alignment with compliance workflows.</li>
-                      <li>Collected user feedback from cross-functional stakeholders, translated insights into actionable product improvements, and supported phased implementation and adoption.</li>
-                      <li>Streamlined ESG reporting processes by 30% through effective requirement mapping, internal testing coordination, and agile communication between business and supplier teams.</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
-                  <div class="card-header">
-                    <div class="role-info">
-                      <h3>Management Intern</h3>
-                      <h4>Explore Europe Travel GmbH</h4>
-                    </div>
-                    <span class="duration">January 2020 - June 2020</span>
-                  </div>
-                  <div class="card-body">
-                    <ul class="achievements">
-                      <li>Collaborating closely with ambassadors and  stakeholders across Europe.</li>
-                      <li>Managing American clients by solving the issues and updating in a timely manner.</li>
-                      <li>Assisting the CEO and planning the trips and onboarding of clients.</li>
-                      <li>Tracking and maintaining KPI, CRM updation & account management.</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
-                  <div class="card-header">
-                    <div class="role-info">
-                      <h3>Product Manager</h3>
-                      <h4>GoFooddy</h4>
-                    </div>
-                    <span class="duration">March 2019 - January 2020</span>
-                  </div>
-                  <div class="card-body">
-                    <ul class="achievements">
-                      <li>Leading and motivating the team of developers for building advanced features, results in optimising the revenue by 25%.</li>
-                      <li>Controlled budget, time and delivered the milestone as per planned.</li>
-                      <li>Maintained a framework and methodology for product management.</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="experience-card" data-aos="zoom-in" data-aos-delay="500">
-                  <div class="card-header">
-                    <div class="role-info">
-                      <h3>Software Developer</h3>
-                      <h4>Sheth Developers Pvt. Ltd</h4>
-                    </div>
-                    <span class="duration">June 2017 - August 2019</span>
-                  </div>
-                  <div class="card-body">
-                    <ul class="achievements">
-                      <li>Successfully completed complex projects on time like CRM software, bill management software, client feedback management and erp access right portal.</li>
-                      <li>Resolved numerous issues including scope creep, gap in stakeholder management and IT process.</li>
-                      <li>Handling and updating clients, internal as well as external stakeholders in a timely manner.</li>
-                      <li>Assessing the risk and proactively resolving the issues.</li>
-                      <li>Facilitating morning stand up and retrospective meetings with the project scrum team.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-            <div class="education-section">
-              <div class="section-header">
-                <h2><i class="bi bi-mortarboard"></i> Academic Excellence</h2>
-                <p class="section-subtitle">Grounded in a strong academic foundation, I hold a Bachelor's in Information Technology and a Global MBA with a specialization in Project Management. My academic journey has equipped me with both technical fluency and strategic thinking—enabling me to bridge business needs with digital innovation.</p>
-              </div>
-
-              <div class="education-timeline">
-                <div class="timeline-track"></div>
-
-                <div class="education-item" data-aos="slide-up" data-aos-delay="300">
-                  <div class="timeline-marker"></div>
-                  <div class="education-content">
-                    <div class="degree-header">
-                      <h3>Global MBA</h3>
-                      <span class="year">October 2019 - April 2021</span>
-                    </div>
-                    <h4 class="institution">Berlin School of Business & Innovation</h4>
-                    <p>Global MBA with Majors in Project Management.</p>
-                  </div>
-                </div>
-
-                <div class="education-item" data-aos="slide-up" data-aos-delay="400">
-                  <div class="timeline-marker"></div>
-                  <div class="education-content">
-                    <div class="degree-header">
-                      <h3>Bachelor of Engineering</h3>
-                      <span class="year">2013 - 2017</span>
-                    </div>
-                    <h4 class="institution"> Mumbai University </h4>
-                    <p>Completed Bachelor of Engineering in Information Technology.</p>
-                  </div>
-                </div>
+              <img src="assets/img/profile/my_photo.jpeg" alt="Suman Yadav" class="img-fluid hero-main-image" fetchpriority="high">
+              <div class="image-overlay" aria-hidden="true"></div>
             </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Resume Section -->
-
-    
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Portfolio</h2>
-        <p>A showcase of product work crafted with clarity, strategy, and user empathy.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
-            <li data-filter="*" class="filter-active">
-              <i class="bi bi-grid-3x3"></i> All Projects
-            </li>
-            <li data-filter=".filter-ui">
-              Health & Wellness
-            </li>
-            <li data-filter=".filter-development">
-              FoodTech 
-            </li>
-            <li data-filter=".filter-photography">
-              eCommerce 
-            </li>
-            <li data-filter=".filter-marketing">
-              B2B Travel
-            </li>
-            <li data-filter=".filter-marketing">
-              FinTech
-            </li>
-          </ul>
-
-          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/SheBelieves Logo.png" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">Health & Wellness</div>
-                      <h3 class="entry-title">SheBelieves App</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/SheBelieves Logo.png" class="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: SheBelieves App; description: Built a platform to support women through curated content and community features. Defined MVP scope, collaborated with stakeholders, and planned roadmap over 4 quarters. Delivered user stories, wireframes, and testing plans. Interviewed 12 participants & conducted beta testing.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-SheBelieves.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/pp3.png" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">FoodTech</div>
-                      <h3 class="entry-title">My Perfect Plate</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/pp3.png" class="glightbox" data-gallery="portfolio-gallery-development" data-glightbox="title: My Perfect Plate; description: I took on the role of Product Manager for My Perfect Plate. I conducted user research, created personas and empathy maps, defined the problem space, and collaborated on the value proposition and MVP. I  organize and prioritize features based on user needs, ensuring the solution aligned with both usability goals and health-focused outcomes.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-MyPerfectPlate.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/ecomm 3.png" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">eCommerce</div>
-                      <h3 class="entry-title">Venetio Ceramics App</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/ecomm 3.png" class="glightbox" data-gallery="portfolio-gallery-photography" data-glightbox="title: Venetio Ceramics App; description: Venetio Ceramics is a mobile app designed to revolutionize luxury bath and kitchen product shopping. It combines 3D visualization and AR integration, allowing users to browse, customize, and virtually place high-end fixtures in their homes. Whether you're an interior designer like Lisa, a digital shopper like Andreas, or a busy homeowner like Frank, Venetio delivers a seamless, visually-rich experience that saves time, enhances confidence, and supports premium design decisions.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-eCommerce.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/Reise 1.png" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">B2B Travel</div>
-                      <h3 class="entry-title">Reise</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/Reise 1.png" class="glightbox" data-gallery="portfolio-gallery-marketing" data-glightbox="title: Reise; description: Reise is a user-friendly B2B travel management platform designed to streamline corporate travel for modern businesses. It empowers employees to book their own trips with ease while giving managers real-time visibility and approval control. With automated workflows, policy compliance, and integrated expense management, Reise reduces administrative burdens, minimizes booking delays, and enhances overall travel efficiency—leading to a smoother, more productive travel experience for everyone involved.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-Travel.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div><!-- End Portfolio Item -->
-
-           <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/Fin 5.png" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">FinTech</div>
-                      <h3 class="entry-title">FinMap</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/Fin 5.png" class="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Fintech; description:               FinMap is an intelligent financial management platform designed for individuals juggling multiple financial accounts and goals. It empowers users to gain total visibility across banking, credit, investments, crypto, and insurance — and leverages AI to deliver actionable insights that improve financial health over time">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-Finmap.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div> --><!-- End Portfolio Item -->
-
-           <!-- <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/Food.png" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">FoodTech</div>
-                      <h3 class="entry-title">My Perfect Plate</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/Food.png" class="glightbox" data-gallery="portfolio-gallery-development" data-glightbox="title: My Perfect Plate; description: A personalized food app that helps users decide what to eat based on their ingredients, preferences, and dietary needs. With smart Restaurant  suggestions, weekly planning, and healthy meal delivery options, it makes eating well simple, every day of the year.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div> --><!-- End Portfolio Item -->
-            
-          <!--  <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">eCommerce</div>
-                      <h3 class="entry-title">Venetio Ceramics App</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/ecomm.png" class="glightbox" data-gallery="portfolio-gallery-photography" data-glightbox="title: Venetio Ceramics App; description: Venetio Ceramics is a mobile app designed to revolutionize luxury bath and kitchen product shopping. It combines 3D visualization and AR integration, allowing users to browse, customize, and virtually place high-end fixtures in their homes. Whether you're an interior designer like Lisa, a digital shopper like Andreas, or a busy homeowner like Frank, Venetio delivers a seamless, visually-rich experience that saves time, enhances confidence, and supports premium design decisions.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div>--><!-- End Portfolio Item -->
-
-           <!-- <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
-              <article class="portfolio-entry">
-                <figure class="entry-image">
-                  <img src="assets/img/portfolio/Travel.png" class="img-fluid" alt="" loading="lazy">
-                  <div class="entry-overlay">
-                    <div class="overlay-content">
-                      <div class="entry-meta">B2B Travel</div>
-                      <h3 class="entry-title">Reise</h3>
-                      <div class="entry-links">
-                        <a href="assets/img/portfolio/Travel.png" class="glightbox" data-gallery="portfolio-gallery-marketing" data-glightbox="title: Reise; description: Reise is a user-friendly B2B travel management platform designed to streamline corporate travel for modern businesses. It empowers employees to book their own trips with ease while giving managers real-time visibility and approval control. With automated workflows, policy compliance, and integrated expense management, Reise reduces administrative burdens, minimizes booking delays, and enhances overall travel efficiency—leading to a smoother, more productive travel experience for everyone involved.">
-                          <i class="bi bi-arrows-angle-expand"></i>
-                        </a>
-                        <a href="portfolio-details.html">
-                          <i class="bi bi-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </figure>
-              </article>
-            </div>--><!-- End Portfolio Item -->
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section">
-
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Frequently Asked Questions</h2>
-      </div><!-- End Section Title -->
-
+    <section id="portfolio" class="section light-background" aria-labelledby="project-title">
       <div class="container">
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>📍 Are you based in Germany?</h3>
-                <div class="faq-content">
-                  <p>Yes. I live in Germany and hold German citizenship, which means I’m fully authorized to work and relocate within the country and the EU.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>🧭 What kind of roles are you looking for?</h3>
-                <div class="faq-content">
-                  <p>I'm currently looking for opportunities as a Product Manager, Project Manager, or Product Owner, ideally in English-speaking or international teams. I'm especially interested in organizations that value agile collaboration, structured delivery, and a user- or stakeholder-centric mindset — whether in digital, physical, or service-oriented products.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>🗣️ Do you speak German?</h3>
-                <div class="faq-content">
-                  <p>Yes, I speak intermediate German and am comfortable working in both English and German-speaking environments. My preference is for English-first teams, but I’m happy to collaborate in bilingual settings as well.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>🚀 What is your work style like?</h3>
-                <div class="faq-content">
-                  <p>I bring structure, clarity, and empathy to cross-functional teams. My approach combines user-focused thinking, agile methods, and strong communication with stakeholders to ensure both product delivery and strategic alignment.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>🤝 Are you open to relocation or remote work?</h3>
-                <div class="faq-content">
-                  <p>Absolutely. I’m open to relocating within Germany or working in a remote/hybrid setup, depending on the team and role.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>✈️ Are you open to business travel?</h3>
-                <div class="faq-content">
-                  <p>Yes — I’m comfortable with regular travel if the role requires collaboration across offices, client visits, or on-site coordination. I see travel as a valuable part of building trust, alignment, and strong stakeholder relationships.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>🧪 Can you share examples of your work?</h3>
-                <div class="faq-content">
-                  <p>I’m happy to walk through my experience, past projects, and responsibilities during interviews. I can share insights and explain my approach to product and project delivery.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div><!-- End Faq Column-->
-
+        <div class="section-title">
+          <p class="eyebrow">Featured cloud lab</p>
+          <h2 id="project-title">Private EC2 access on AWS</h2>
+          <p>I configured SSH access to a Linux EC2 instance in a private subnet without assigning the instance a public IP address.</p>
         </div>
-
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="cloud-panel">
+              <h3>What I built</h3>
+              <p>I used an EC2 Instance Connect Endpoint to reach the instance. The instance security group allowed inbound SSH on TCP port 22 from the endpoint’s security group.</p>
+              <p class="muted">The lab gave me practice with subnet placement, private access and security group rules.</p>
+              <ul class="cloud-tags" aria-label="Project technologies">
+                <li>Amazon EC2</li><li>Amazon VPC</li><li>Linux</li><li>Security groups</li><li>SSH</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <figure class="cloud-panel cloud-diagram mb-0">
+              <figcaption class="eyebrow">SSH connection path</figcaption>
+              <ol>
+                <li><strong>SSH client</strong><small>Starts the connection</small></li>
+                <li><strong>EC2 Instance Connect Endpoint</strong><small>Provides a path to the instance in the VPC</small></li>
+                <li><strong>Linux EC2 in a private subnet</strong><small>No public IP · Inbound TCP 22 from the endpoint security group</small></li>
+              </ol>
+            </figure>
+          </div>
+        </div>
       </div>
+    </section>
 
-    </section><!-- /Faq Section -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">About me</p>
+          <h2 id="about-title">From SaaS delivery to cloud infrastructure</h2>
+          <p>My background spans software development, API integrations, workflow automation and access management. At Digital Career Institute, I’m building on that experience with AWS, Linux, Terraform, networking and CI/CD.</p>
+        </div>
+      </div>
+    </section>
 
+    <section id="skills" class="section light-background" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="skills-title">Skills and credentials</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="cloud-panel">
+              <h3>Cloud and networking</h3>
+              <p>Private EC2 access, Amazon VPC, Linux, SSH and security groups. Coursework also covers IAM, S3, Lambda and CloudWatch.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="cloud-panel">
+              <h3>Infrastructure and tooling</h3>
+              <p>Terraform, Infrastructure as Code, Git, Bash and CI/CD fundamentals. Docker and Kubernetes through training.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="cloud-panel">
+              <h3>Completed certifications</h3>
+              <ul class="mb-0">
+                <li><a href="https://www.credly.com/badges/da116247-74e3-4003-834f-375572e0fc98/public_url">HashiCorp Certified: Terraform Associate (004)</a></li>
+                <li>ISO/IEC 27001 Lead Auditor</li>
+                <li>ISO/IEC 27001 Lead Implementer</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="section" aria-labelledby="resume-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="resume-title">Professional experience</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="cloud-panel">
+              <h3>ESG Software Specialist</h3>
+              <p class="muted">ib vogt GmbH · Berlin · Oct 2021 – Nov 2025</p>
+              <p>Supported a cloud-based ESG SaaS rollout across 8+ regions and managed integrations, dashboards, onboarding and access for 200+ users. Improved workflow and reporting efficiency by 30% through API integrations and automation.</p>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="cloud-panel">
+              <h3>Software Developer</h3>
+              <p class="muted">Sheth Developers Pvt. Ltd. · India · Jun 2017 – Aug 2019</p>
+              <p>Developed CRM, billing and ERP solutions with cross-functional teams using agile practices.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer" class="footer dark-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">2025</strong> <span>All Rights Reserved</span></p>
+  <footer id="contact" class="footer dark-background cloud-contact">
+    <div class="container text-center">
+      <h2>Let’s connect</h2>
+      <p>Based in Cologne and open to Cloud Engineer opportunities.</p>
+      <div class="d-flex justify-content-center flex-wrap gap-3">
+        <a class="contact-link" href="mailto:sumanyadav9518@gmail.com">Email</a>
+        <a class="contact-link" href="https://www.linkedin.com/in/suman-yadav-aws/">LinkedIn</a>
+        <a class="contact-link" href="https://github.com/sumi9518">GitHub</a>
       </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.linkedin.com/in/suman-yadav-berlin/"><i class="bi bi-linkedin"></i></a>
-        <a href="https://github.com/sumi9518"><i class="bi bi-github"></i></a>
-      </div>
-      <div class="credits">
-        Made with &hearts; by Bootstrap5
-      </div>
+      <p class="mt-4 mb-0">Suman Yadav · Portfolio template by <a href="https://bootstrapmade.com/">BootstrapMade</a></p>
     </div>
-
   </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script>
+    const navigation = document.querySelector('#navmenu');
+    const toggle = document.querySelector('.mobile-nav-toggle');
+    function setMenu(open) {
+      document.body.classList.toggle('mobile-nav-active', open);
+      navigation.inert = !open;
+      toggle.classList.toggle('bi-list', !open);
+      toggle.classList.toggle('bi-x', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    }
+    toggle.addEventListener('click', () => {
+      const open = navigation.inert;
+      setMenu(open);
+      if (open) navigation.querySelector('a').focus();
+    });
+    navigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        setMenu(false);
+        if (link.hash) {
+          const section = document.getElementById(link.hash.slice(1));
+          if (section) {
+            section.tabIndex = -1;
+            section.focus({ preventScroll: true });
+          }
+        }
+      });
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !navigation.inert) {
+        setMenu(false);
+        toggle.focus();
+      }
+    });
+  </script>
 </body>
-
 </html>
